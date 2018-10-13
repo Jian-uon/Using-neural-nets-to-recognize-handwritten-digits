@@ -95,6 +95,7 @@ class Network(object):
                 print "Accuracy on evaluation data: {} / {}".format(
                     self.accuracy(evaluation_data), n_data)
             print
+        self.save('params.txt')
         return evaluation_cost, evaluation_accuracy, \
             training_cost, training_accuracy
 
