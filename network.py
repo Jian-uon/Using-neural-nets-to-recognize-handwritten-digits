@@ -168,6 +168,11 @@ class Network(object):
         f = open(filename, "w")
         json.dump(data, f)
         f.close()
+    
+    def recognize(self, vec_img):
+        net = load('params.txt')
+        ans = net.feedforward(vec_img)
+        return ans.argmax() 
 
 #### Loading a Network
 def load(filename):
