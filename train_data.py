@@ -4,9 +4,7 @@ import network
 
 net = network.Network([784, 30, 10], cost=network.CrossEntropyCost)
 
-def getData():
-    training_data, validation_data, test_data = mnist_loader.load_data_wrapper()
-#print training_data[0]
+training_data, validation_data, test_data = mnist_loader.load_data_wrapper()
 
 def train():
     net.SGD(training_data, 30, 10, 0.5, 
@@ -18,4 +16,5 @@ def train():
             monitor_training_cost=True)
 
 if __name__ == '__main__':
-   getData() 
+    #train()
+    pass
